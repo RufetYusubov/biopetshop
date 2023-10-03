@@ -1,38 +1,61 @@
-*{
+:root {
+    --blue: #486AA6;
+    --white: #fff;
+    --yellow: #C1D72D;
+    --black: #000;
+    --grey: #979797;
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-select{
+
+select {
     border: none;
     outline: none;
 }
-nav ul li{
+
+ul li {
     list-style: none;
 }
-header{
+
+header {
     height: 100vh;
+    overflow: hidden;
 }
-.header_head_container{
+
+body {
+    font-size: 1.6rem;
+}
+
+.header_head_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 15vh;
 }
-.header_right_icons{
+
+.header_right_icons {
     display: flex;
     align-items: center;
     gap: 25px;
     margin-right: 145px;
 }
-.header_head_container img{
+
+.header_head_container img {
     margin-left: 134px;
     margin-top: 33px;
     margin-bottom: 24px;
     width: 239px;
 }
 
-.search_icon{
+.search_icon {
     background: rgba(150, 141, 141, 0.16);
     width: 199px;
     height: 36px;
@@ -41,80 +64,446 @@ header{
     border-radius: 6px;
 }
 
-.search{
+.search {
     background: none;
     border: none;
     outline: none;
     width: 85%;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
-.btn{
+.btn {
     display: flex;
     align-items: center;
     gap: 1px;
-    background-color: #486AA6;
+    background-color: var(--blue);
     border: none;
     border-radius: 4px;
     padding-left: 10px;
     width: 119px;
     height: 36px;
 }
-.btn p{
-    color: #fff;
-    font-size: 14px;
+
+.btn p {
+    color: var(--white);
+    font-size: 1.4rem;
     font-weight: 400;
 }
-.btn_inp{
+
+.btn_inp {
     display: flex;
     gap: 24px;
 }
 
-.header_icons{
+.header_icons {
     display: flex;
     gap: 21px;
 }
-.header_icons{
+
+.header_icons {
     position: relative;
 }
-.yellow_circle{
+
+.yellow_circle {
     position: absolute;
     right: -4px;
     bottom: 12px;
 }
-.header_nav_list{
-    background: #486AA6;
+
+.header_nav_list {
+    background: var(--blue);
     padding-top: 30px;
     padding-bottom: 32px;
     height: 5vh;
-    z-index: 9;  
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.nav_list{
+
+.nav_list {
     display: flex;
     gap: 48px;
     max-width: 1092px;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
-.list{
+
+.list {
     display: flex;
     align-items: center;
     gap: 8px;
 }
-.list li{
-    color: #FFF;
-    font-size: 18px;
+
+.list li {
+    color: var(--white);
+    font-size: 1.8rem;
     font-weight: 300;
 }
 
-.header_middle_container{
+.header_middle_container {
     background-image: url(./images/3469432\ 1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 77vh;
+    padding-left: 162px;
+}
+
+.header_middle_container h1 {
+    color: var(--white);
+    font-size: 3.8rem;
+    font-weight: 400;
+    max-width: 542px;
+    margin-top: 198px;
+    display: inline-block;
+}
+
+.header_middle_container h2 {
+    color: var(--yellow);
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+
+.header_middle_container button {
+    border-radius: 14px;
+    background: var(--yellow);
+    box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
+    padding: 12px 31px;
+    border: none;
+    color: var(--black);
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.header_svg {
+    display: flex;
+    gap: 11px;
+    margin-top: 126px;
+    align-items: center;
+}
+
+.svg_2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main section 1 */
+.section_header_products {
+    color: var(--black);
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 83px;
+}
+
+.animals_container {
+    display: flex;
+    gap: 87px;
+    overflow-x: hidden;
+}
+
+.slider_container {
+    display: flex;
+    max-width: 1328px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.left_icon {
+    margin-right: 230px;
+}
+
+.right_icon {
+    margin-left: 230px;
+}
+
+.card_middle {
+    margin-top: 116px;
+}
+
+.card {
+    min-width: 210px;
+    transition: 1s;
+}
+
+.card_middle {
+    min-width: 210px;
+    transition: 1s;
+}
+
+.card p {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 26px;
+}
+
+.card_middle p {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 26px;
+}
+
+/* main section 2 */
+
+.new_trend {
+    max-width: 1172px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section_header {
+    margin-top: 94px;
+    margin-bottom: 42px;
+    color: var(--black);
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.grid_card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+    gap: 20px;
+}
+
+.card_basket {
+    min-width: 278px;
+    height: 245px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.card_img {
+    background-image: url('./images/closeup-shot-ginger-cat-wicker-basket-isolated-white-wall\ 1.png');
+}
+
+.card_img2 {
+    background-image: url('./images/street-fashioned-brown-white-dog-cool-black-hoodie-trucker-cap-with-mesh-back-rustic-wooden-table\ 1.png');
+}
+
+.card_img3 {
+    background-image: url('./images/pets-food-wooden-floor\ 1.png');
+}
+
+.card_img4 {
+    background-image: url('./images/image\ 1\ \(2\).png');
+}
+
+.bg_shadow {
+    background: rgba(9, 9, 9, 0.16);
+    height: 100%;
+    box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
+}
+
+.heart_icon {
+    width: 51px;
+    height: 41px;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.basket_btn {
+    display: flex;
+    gap: 4px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 8px 21px 10px 24px;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 19px;
+    bottom: 18px;
+}
+
+.basket_btn p {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.card_basket .price {
+    color: var(--black);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 28px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 46px;
+}
+
+.btns .new_btn,
+.btns .choose_btn {
+    min-width: 181px;
+    color: var(--black);
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-radius: 9px;
+    border: 0.3px solid var(--grey);
+    background: var(--white);
+    padding: 16px 28px 15px 37px;
+}
+
+.btns .blue_btn {
+    min-width: 243px;
+    border-radius: 9px;
+    background: rgba(72, 106, 166, 0.89);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 32px 15px 33px;
+    border: none;
+    margin-left: 385px;
+}
+
+.product_cards {
+    max-width: 1169px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid_product_card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+    gap: 19px;
+}
+
+.product_card {
+    min-width: 278px;
+    border-radius: 6px;
+    background: #FCFCFC;
+    box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product_card img {
+    min-width: 252px;
+    margin-top: 16px;
+    margin-bottom: 11px;
+}
+
+.product_card .title {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.product_card .product_price {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.icon_btn {
+    display: flex;
+    gap: 96px;
+    min-width: 252px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+}
+
+.basket_button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background: #EDECEC;
+    padding: 8px 21px 10px 24px;
+    border: none;
+    outline: none;
+}
+
+.basket_button p {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.heart_card_icon {
+    width: 50px;
+    height: 41px;
+    background-color: #EDECEC;
+    border: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service_cards {
+    background-image: url('./images/pet-accessories-still-life-concept-with-grooming-objects-food\ 1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.service_card_container {
+    display: flex;
+    gap: 19px;
+    overflow-x: hidden;
+}
+
+.service_card {
+    min-width: 278px;
+    border-radius: 10px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 76px;
+    gap: 17px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    transition: 1s;
+}
+
+.left_2_icon {
+    margin-right: 50px;
+}
+
+.right_2_icon {
+    margin-left: 50px;
+}
+
+.service_card p {
+    margin-bottom: 78px;
+    color: #1D1D1B;
+    font-size: 18px;
+    font-weight: 400;
 }
