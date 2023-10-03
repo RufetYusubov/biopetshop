@@ -4,6 +4,9 @@
     --yellow: #C1D72D;
     --black: #000;
     --grey: #979797;
+    --product_card_color: #FCFCFC;
+    --grey1: #EDECEC;
+
 }
 
 html {
@@ -23,6 +26,10 @@ select {
 
 ul li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -229,14 +236,11 @@ body {
 
 .card_middle {
     margin-top: 116px;
-}
-
-.card {
     min-width: 210px;
     transition: 1s;
 }
 
-.card_middle {
+.card {
     min-width: 210px;
     transition: 1s;
 }
@@ -352,6 +356,7 @@ body {
     justify-content: center;
 }
 
+/* main section 3 */
 .btns {
     display: flex;
     gap: 14px;
@@ -397,7 +402,7 @@ body {
 .product_card {
     min-width: 278px;
     border-radius: 6px;
-    background: #FCFCFC;
+    background: var(--product_card_color);
     box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
 }
 
@@ -441,7 +446,7 @@ body {
     align-items: center;
     gap: 4px;
     border-radius: 6px;
-    background: #EDECEC;
+    background: var(--grey1);
     padding: 8px 21px 10px 24px;
     border: none;
     outline: none;
@@ -456,12 +461,14 @@ body {
 .heart_card_icon {
     width: 50px;
     height: 41px;
-    background-color: #EDECEC;
+    background-color: var(--grey1);
     border: 1px solid var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* main section 4 */
 
 .service_cards {
     background-image: url('./images/pet-accessories-still-life-concept-with-grooming-objects-food\ 1.png');
@@ -469,7 +476,7 @@ body {
     background-position: center;
     background-size: cover;
     width: 100%;
-
+    margin-bottom: 189px;
 }
 
 .service_card_container {
@@ -481,7 +488,7 @@ body {
 .service_card {
     min-width: 278px;
     border-radius: 10px;
-    background: #FFF;
+    background: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -507,3 +514,81 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+
+/* footer */
+footer {
+    background: rgba(150, 141, 141, 0.40);
+}
+
+.footer_container{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brend_group {
+    display: flex;
+    gap: 110px;
+    padding-top: 32px;
+}
+
+.footer_line_svg {
+    margin-top: 26px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 124px;
+}
+
+.text a {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer_end{
+    display: flex;
+    align-items: center;
+    padding-bottom: 51px;
+}
+.footer_inp{
+    width: 355px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: rgba(29, 29, 27, 0.17);
+    margin-right: 85px;
+}
+.footer_inp input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 85%;
+    font-size: 2.5rem;
+    padding-left: 10px;
+}
+
+.vector_div{
+    width: 95px;
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google_microsoft{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    margin-right: 74px;
+}
+.google_microsoft img{
+    width: 130px;
+    height: 38px;
+}
+
