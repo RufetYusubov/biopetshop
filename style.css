@@ -154,10 +154,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 77vh;
     padding-left: 162px;
 }
+.header_slider_container{
+    height: 77vh;
 
+}
 .header_middle_container h1 {
     color: var(--white);
     font-size: 3.8rem;
@@ -167,7 +169,7 @@ body {
     display: inline-block;
 }
 
-.header_middle_container h2 {
+.header_middle_container h1 span {
     color: var(--yellow);
     font-size: 3.8rem;
     font-weight: 700;
@@ -183,6 +185,7 @@ body {
     font-size: 2.1rem;
     font-weight: 500;
     margin-top: 30px;
+    display: block;
 }
 
 .header_svg {
@@ -282,6 +285,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
     gap: 20px;
+    
 }
 
 .card_basket {
@@ -289,28 +293,17 @@ body {
     height: 245px;
     border-radius: 6px;
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
-.card_img {
-    background-image: url('./images/closeup-shot-ginger-cat-wicker-basket-isolated-white-wall\ 1.png');
-}
-
-.card_img2 {
-    background-image: url('./images/street-fashioned-brown-white-dog-cool-black-hoodie-trucker-cap-with-mesh-back-rustic-wooden-table\ 1.png');
-}
-
-.card_img3 {
-    background-image: url('./images/pets-food-wooden-floor\ 1.png');
-}
-
-.card_img4 {
-    background-image: url('./images/image\ 1\ \(2\).png');
-}
 
 .bg_shadow {
     background: rgba(9, 9, 9, 0.16);
     height: 100%;
     box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
+    width: 100%;
 }
 
 .heart_icon {
@@ -337,13 +330,13 @@ body {
     position: absolute;
     left: 19px;
     bottom: 18px;
-}
-
-.basket_btn p {
     color: var(--black);
     font-size: 1.4rem;
     font-weight: 400;
+    align-items: center;
 }
+
+
 
 .card_basket .price {
     color: var(--black);
@@ -530,6 +523,7 @@ footer {
     display: flex;
     gap: 110px;
     padding-top: 32px;
+    align-items: center;
 }
 
 .footer_line_svg {
@@ -592,3 +586,6 @@ footer {
     height: 38px;
 }
 
+.slider_container1{
+    height: 500px;
+}
