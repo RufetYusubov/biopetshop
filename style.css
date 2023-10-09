@@ -37,8 +37,18 @@ header {
     overflow: hidden;
 }
 
+
+
+.basket_header{
+    height: 20vh;
+    border-bottom: 2px solid var(--blue);
+}
+
 body {
     font-size: 1.6rem;
+}
+nav{
+    background-color: #486AA6;
 }
 
 .header_head_container {
@@ -46,6 +56,30 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 15vh;
+}
+
+.header_head_container .kataloq_btn{
+    border: none;  
+    color: white;
+    background: none;
+    outline: none;
+    font-size: 1.8rem;
+    
+}
+.bar_btn{
+    background-color: var(--blue);
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.logo_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
 .header_right_icons {
@@ -61,6 +95,16 @@ body {
     margin-bottom: 24px;
     width: 239px;
 }
+
+
+.btn_inp {
+    display: flex;
+    gap: 24px;
+}  
+
+.bars_icon,.close_icon{
+    display: none;
+} 
 
 .search_icon {
     background: rgba(150, 141, 141, 0.16);
@@ -80,6 +124,7 @@ body {
     padding-left: 10px;
 }
 
+
 .btn {
     display: flex;
     align-items: center;
@@ -95,33 +140,40 @@ body {
     font-weight: 400;
 }
 
-.btn_inp {
-    display: flex;
-    gap: 24px;
-}
-
 .header_icons {
     display: flex;
     gap: 21px;
 }
 
-.header_nav_list {
-    background: var(--blue);
-    padding-top: 30px;
-    padding-bottom: 32px;
-    height: 5vh;
-    z-index: 9;
+.basket_icon_container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+}
+
+.count_div{
+    position: absolute;
+    background-color: var(--blue);
+    bottom: 15px;
+    left: 15px;
+    border-radius: 3px;
+    width: 18px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
 }
 
 .nav_list {
-    display: flex;
-    gap: 48px;
-    max-width: 1092px;
-    margin-left: auto;
+    display: flex; 
+    max-width: 1092px; 
+    margin-left: auto; 
     margin-right: auto;
+    gap: 48px; 
+    padding-top: 30px;
+    padding-bottom: 32px;
+    height: 5vh;
+    justify-content: center;
+    align-items: center; 
 }
 
 .nav_list li a{
@@ -129,9 +181,50 @@ body {
     font-size: 1.8rem;
     font-weight: 300;
     display: flex;
-    align-items: center;
     gap: 8px;
+    align-items: center;
 }
+
+.nav_list_for_animals{
+    position: relative;
+    height: 50px;
+    display: flex;  
+}
+.nav_list_for_animals_list{
+    position: absolute;
+    top: -500px;
+    z-index: 999;
+    background-color: var(--white);
+    width: 245px;
+    height: 300px;
+    border-radius: 3px; 
+}
+.nav_list_for_animals:hover .nav_list_for_animals_list{
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    
+}
+.nav_list_for_animals:hover a{
+    color: yellow;
+}
+.nav_list_for_animals:hover a svg{
+    transform: rotate(180deg);
+}
+
+.nav_list_for_animals:hover .nav_list_for_animals_list li a{
+    color: #9A9A98;
+    padding-left: 10px;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+.nav_list_for_animals:hover .nav_list_for_animals_list li a:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
 
 .header_middle_container {
     background-image: url(./images/3469432\ 1.png);
@@ -140,10 +233,12 @@ body {
     background-size: cover;
     padding-left: 162px;
 }
+
 .header_slider_container{
     height: 80vh;
 
 }
+
 .header_middle_container h1 {
     color: var(--white);
     font-size: 3.8rem;
@@ -196,7 +291,7 @@ body {
 
 .animals_container {
     display: flex;
-    gap: 87px;
+    gap: 87px;  
     overflow-x: hidden;
 }
 
@@ -207,7 +302,7 @@ body {
 .card_middle {
     margin-top: 116px;
     min-width: 210px;
-    /* transition: 1s; */
+    transition: 1s;
 }
 
 .card {
@@ -240,17 +335,18 @@ body {
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-    gap: 20px;
-    
+    gap: 20px; 
 }
+
 
 .card_basket {
     min-width: 278px;
     border-radius: 6px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    /* width: 100%; */
 }
+
 .card_basket img{
     height: 100%;
     width: 100%;
@@ -258,32 +354,25 @@ body {
 }
 .card_basket_content{
     position: relative;
-    height: 245px;
+    /* height: 245px; */
 }
-/* 
-.bg_shadow {
-    background: rgba(9, 9, 9, 0.16);
-    height: 100% ;
-    box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
-    width: 100%;
-    position: relative;
-
-} */
 
 .heart_icon {
-    width: 51px;
-    height: 41px;
-    background-color: var(--white);
-    border: 1px solid var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 0;
     right: 0;
+    width: 51px;
+    height: 41px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .basket_btn {
+    position: absolute;
+    left: 19px;
+    bottom: 18px;
     display: flex;
     gap: 4px;
     border-radius: 6px;
@@ -291,9 +380,6 @@ body {
     padding: 8px 21px 10px 24px;
     border: none;
     outline: none;
-    position: absolute;
-    left: 19px;
-    bottom: 18px;
     color: var(--black);
     font-size: 1.4rem;
     font-weight: 400;
@@ -320,11 +406,10 @@ body {
     margin-bottom: 46px;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
 }
 
 .btns .new_btn {
-    min-width: 181px;
+    /* min-width: 181px; */
     color: var(--black);
     font-size: 1.6rem;
     font-weight: 400;
@@ -335,24 +420,18 @@ body {
 }
 
 .btns .active_btn {
-    /* min-width: 260px; */
     border-radius: 9px;
     background: rgba(72, 106, 166, 0.89);
     color: var(--white);
     font-size: 1.6rem;
     font-weight: 700;
-    /* padding: 16px 32px 15px 33px; */
     border: none;
-    /* margin-left: 385px; */
-}
-
-.product_cards {
-    max-width: 1169px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .grid_product_card_container {
+    max-width: 1169px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
     gap: 19px;
@@ -363,9 +442,6 @@ body {
     border-radius: 6px;
     background: var(--product_card_color);
     box-shadow: 0px 0px 9px 0px rgba(69, 69, 69, 0.18);
-}
-
-.product_card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -500,10 +576,15 @@ footer {
     gap: 10px;
     margin-right: 124px;
 }
+.text_inp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .text a {
     color: var(--black);
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 .footer_end{
@@ -562,15 +643,63 @@ footer {
 .hide{
     display: none;
 }
-.aptek_levazimatlari{
+
+/* basket html */
+.basket_card{
+    max-width: 900px;
+    margin-left: 134px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.basket_card .basket_img_icon img{
+    width: 120px;
+    height: 150px;
+}
+
+.basket_img_icon{
     position: relative;
 }
-.aptek_levazimatlari_list{
+.basket_img_icon .heart_icon{
     position: absolute;
-    top: -500px;
-    z-index: 999;
-    background-color: red;
+    width: 30px;
+
 }
-.aptek_levazimatlari:hover .aptek_levazimatlari_list{
-    top: 20px;
+.b_buttons{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.b_buttons button{
+    padding: 5px 6px;
+    border-radius: 50%;
+    border: none;
+    color: var(--black);
+    font-size: 2rem;
+}
+.b_buttons span{
+    font-size: 2rem;
+}
+
+.basket_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.card_basket .basket_product{
+    font-size: 2rem;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.card_basket .basket_price{
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 50px;
 }

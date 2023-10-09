@@ -3,10 +3,14 @@ let leftIcon = document.querySelector('.left_icon')
 let rightIcon = document.querySelector('.right_icon')
 let gridCardContainer = document.querySelector('.grid_card_container')
 let basketIconContainer = document.querySelector('.basket_icon_container')
-let gridProductCardContainer = document.querySelector('.grid_product_card_container')
 let basketCount = document.querySelector('.basket_count')
+let gridProductCardContainer = document.querySelector('.grid_product_card_container')
 let newBtn = document.querySelectorAll('.new_btn')
 let btns = document.querySelector('.btns')
+let selectFilter = document.querySelector('.select_filter')
+let barsIcon = document.querySelector('bars_icon')
+let closeIcon = document.querySelector('close_icon')
+let nav = document.querySelector('nav')
 
 basketCount.innerHTML = basket.length
 let products = [
@@ -98,13 +102,19 @@ let foodProducts = [
 ]
 
 
+// foodProducts.forEach(x=>{
+//     selectFilter.innerHTML+=`
+//         <option>${x.title}</option>
+//     `
+// })
+
 let count = 0
 function slider() {
     for (let i = 0; i < animals.children.length; i++) {
         animals.children[i].style.transform = `translateX(${-300 * count}px)`
         animals.children[i].classList.remove('card_middle')
+        animals.children[count + 1].classList.add('card_middle')
     }
-    animals.children[count + 1].classList.add('card_middle')
 }
 
 setInterval(() => {
@@ -334,3 +344,7 @@ for(let i=0;i<newBtn.length;i++){
 
     })
 }
+
+// barsIcon.addEventListener('click',()=>{
+  
+// })

@@ -1,0 +1,156 @@
+@media screen and (max-width: 1200px) {
+    .brend_group {
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .footer_container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .footer_end {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .text_inp {
+        display: flex;
+        align-items: center;
+        margin-left: 150px;
+    }
+
+    .footer_end .social {
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .header_icons{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--black);
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 50px;
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 100px;
+        z-index: 999;
+        font-size: 3rem;
+        color: white;
+    }
+    .header_icons svg{
+        height: 3rem;
+    }
+    .bars_icon{
+        display: block;
+    }
+    nav{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;  
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .brend_group img {
+        width: 100px;
+    }
+
+    .text_inp {
+        flex-direction: column;
+        gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .brend_group {
+        flex-direction: column;
+        margin-right: 50px;
+        gap: 15px;
+    }
+
+    .text {
+        text-align: center;
+        gap: 3px;
+    }
+
+    .text_inp {
+        flex-direction: column;
+        gap: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer_inp {
+        width: 250px;
+        height: 35px;
+    }
+
+    .footer_end {
+        gap: 15px;
+    }
+
+    .footer_line_svg {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .brend_group img {
+        width: 50px;
+    }
+
+    .text a {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .footer_inp {
+        width: 150px;
+        height: 20px;
+    }
+
+    .vector_div {
+        width: 30px;
+    }
+
+    .vector_div svg {
+        height: 10px;
+    }
+
+    .google_microsoft img {
+        width: 60px;
+        height: 19px;
+    }
+
+    .footer_end svg {
+        width: 90px;
+    }
+
+    .footer_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_line_svg {
+        display: none;
+    }
+    .footer_end{
+        padding-bottom: 0;
+    }
+}
