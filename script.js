@@ -3,16 +3,20 @@ let leftIcon = document.querySelector('.left_icon')
 let rightIcon = document.querySelector('.right_icon')
 let gridCardContainer = document.querySelector('.grid_card_container')
 let basketIconContainer = document.querySelector('.basket_icon_container')
+let favouriteIconContainer = document.querySelector('.favourite_icon_container')
 let basketCount = document.querySelector('.basket_count')
+let favouriteCount = document.querySelector('.favourite_count')
 let gridProductCardContainer = document.querySelector('.grid_product_card_container')
 let newBtn = document.querySelectorAll('.new_btn')
 let btns = document.querySelector('.btns')
 let selectFilter = document.querySelector('.select_filter')
-let barsIcon = document.querySelector('bars_icon')
-let closeIcon = document.querySelector('close_icon')
+let barsIcon = document.querySelector('.bars_icon')
+let closeIcon = document.querySelector('.close_icon')
 let nav = document.querySelector('nav')
 
+
 basketCount.innerHTML = basket.length
+favouriteCount.innerHTML = favourite.length
 let products = [
     {
         id: 1,
@@ -102,11 +106,7 @@ let foodProducts = [
 ]
 
 
-// foodProducts.forEach(x=>{
-//     selectFilter.innerHTML+=`
-//         <option>${x.title}</option>
-//     `
-// })
+
 
 let count = 0
 function slider() {
@@ -199,9 +199,9 @@ var swiper = new Swiper(".mySwiper", {
     // slidesPerView: 4,
     // breakpoints :{
     //     768:{
-    //         slidesPerView: 4,
+    //         slidesPerView: 1,
     //     },
-    //     576:{
+    //     400:{
     //         slidesPerView: 3,
     //     },
     //     300:{
@@ -213,6 +213,9 @@ var swiper = new Swiper(".mySwiper", {
 basketIconContainer.addEventListener('click', () => {
     window.location.href = './basket.html'
 })
+favouriteIconContainer.addEventListener('click', () => {
+    window.location.href = './myfavourite.html'
+})
 
 
 products.forEach(data => {
@@ -220,13 +223,8 @@ products.forEach(data => {
                     <div class="card_basket">
                             <div class="card_basket_content">
                             <img src="${data.img}" alt="">
-                                <div class="heart_icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                    fill="none">
-                                    <path
-                                        d="M20.1046 9.26959C22.2642 7.14738 22.2642 3.69662 20.1046 1.59166C17.9451 -0.530554 14.4336 -0.530554 12.2741 1.59166L11.2206 2.62689L10.1672 1.59166C8.00763 -0.530554 4.49616 -0.530554 2.35417 1.59166C1.30073 2.60963 0.738892 3.98994 0.738892 5.43925C0.738892 6.88857 1.31828 8.25162 2.35417 9.28685L11.2206 18L20.1046 9.26959ZM2.12592 5.43925C2.12592 4.35226 2.5473 3.33429 3.33738 2.57513C4.14502 1.78145 5.19846 1.38462 6.2519 1.38462C7.30534 1.38462 8.35878 1.78145 9.16642 2.57513L11.2206 4.57656L13.2748 2.55787C14.8901 0.970525 17.5062 0.970525 19.1039 2.55787C19.8764 3.31704 20.3153 4.33501 20.3153 5.422C20.3153 6.50899 19.894 7.52696 19.1039 8.28613L11.2206 16.0503L3.33738 8.30338C2.56486 7.52696 2.12592 6.50899 2.12592 5.43925Z"
-                                        fill="black" />
-                                    </svg>
+                                <div class="heart_icon">            
+                                    <i class="fa-solid fa-heart" onclick = "addToFavourite(${data.id})"></i>
                                 </div>
                                 <button onclick="addToBasket(${data.id})" class="basket_btn">
                                 İndi al
@@ -252,7 +250,7 @@ products.forEach(data => {
     `
 })
 
-foodProducts.forEach(data=>{
+foodProducts.forEach(data => {
     gridProductCardContainer.innerHTML += `
     <div class="product_card" data-name="${data.dataX}">
         <img src="${data.img}" alt="">
@@ -276,12 +274,7 @@ foodProducts.forEach(data=>{
                 </svg>
             </button>
             <div class="heart_card_icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                    fill="none">
-                    <path
-                        d="M20.1046 9.26959C22.2642 7.14738 22.2642 3.69662 20.1046 1.59166C17.9451 -0.530554 14.4336 -0.530554 12.2741 1.59166L11.2206 2.62689L10.1672 1.59166C8.00763 -0.530554 4.49616 -0.530554 2.35417 1.59166C1.30073 2.60963 0.738892 3.98994 0.738892 5.43925C0.738892 6.88857 1.31828 8.25162 2.35417 9.28685L11.2206 18L20.1046 9.26959ZM2.12592 5.43925C2.12592 4.35226 2.5473 3.33429 3.33738 2.57513C4.14502 1.78145 5.19846 1.38462 6.2519 1.38462C7.30534 1.38462 8.35878 1.78145 9.16642 2.57513L11.2206 4.57656L13.2748 2.55787C14.8901 0.970525 17.5062 0.970525 19.1039 2.55787C19.8764 3.31704 20.3153 4.33501 20.3153 5.422C20.3153 6.50899 19.894 7.52696 19.1039 8.28613L11.2206 16.0503L3.33738 8.30338C2.56486 7.52696 2.12592 6.50899 2.12592 5.43925Z"
-                        fill="black" />
-                </svg>
+                <i class="fa-solid fa-heart"  onclick = "addToPrFavourite(${data.id})"></i>
             </div>
         </div>
     </div>
@@ -289,7 +282,9 @@ foodProducts.forEach(data=>{
 `
 })
 
-let productCard=document.querySelectorAll('.product_card')
+let productCard = document.querySelectorAll('.product_card')
+
+
 
 function addToBasket(id) {
     console.log(id);
@@ -299,12 +294,25 @@ function addToBasket(id) {
         checkBasket.count += 1
     } else {
         let checkPr = products.find(y => y.id === id)
-        checkPr.count = 1
         basket.push(checkPr)
     }
     basketCount.innerHTML = basket.length
+
     localStorage.setItem('sebet', JSON.stringify(basket))
     console.log(basket);
+}
+
+function addToFavourite(id) {
+    let index = favourite.findIndex(x => x.id === id)
+    if (index !== -1) {
+        favourite.splice(index, 1)
+    } else {
+        let checkPr = products.find(x => x.id === id)
+        checkPr.count = 1
+        favourite.push(checkPr)
+    }
+    favouriteCount.innerHTML = favourite.length
+    localStorage.setItem('favorilerim', JSON.stringify(favourite))
 }
 
 function addToPrBasket(id) {
@@ -322,21 +330,34 @@ function addToPrBasket(id) {
 
 }
 
+function addToPrFavourite(id) {
+    let index = favourite.findIndex(y => y.id === id);
+    if (index !== -1) {
+        favourite.splice(index, 1)
+    } else {
+        let checkfoodPr = foodProducts.find(y => y.id === id)
+        checkfoodPr.count = 1
+        favourite.push(checkfoodPr)
+    }
+    favouriteCount.innerHTML = favourite.length
+    localStorage.setItem('favorilerim', JSON.stringify(favourite))
+}
 
-for(let i=0;i<newBtn.length;i++){
-    newBtn[i].addEventListener('click',()=>{
+
+for (let i = 0; i < newBtn.length; i++) {
+    newBtn[i].addEventListener('click', () => {
         btns.querySelector('.active_btn').classList.remove('active_btn')
         newBtn[i].classList.add('active_btn')
 
-        let dataBtn=newBtn[i].getAttribute('data-name')
+        let dataBtn = newBtn[i].getAttribute('data-name')
 
-        for(let i=0;i<productCard.length;i++){
-            let dataCard=productCard[i].getAttribute('data-name')
+        for (let i = 0; i < productCard.length; i++) {
+            let dataCard = productCard[i].getAttribute('data-name')
 
-            if(dataBtn===dataCard || dataBtn==='butun'){
+            if (dataBtn === dataCard || dataBtn === 'butun') {
                 productCard[i].classList.add('show')
                 productCard[i].classList.remove('hide')
-            }else{
+            } else {
                 productCard[i].classList.add('hide')
                 productCard[i].classList.remove('show')
             }
@@ -345,6 +366,47 @@ for(let i=0;i<newBtn.length;i++){
     })
 }
 
-// barsIcon.addEventListener('click',()=>{
-  
-// })
+let heartIcons = document.querySelectorAll('.heart_icon i');
+let heartCardIcon = document.querySelectorAll('.heart_card_icon i')
+
+for (let i = 0; i < heartIcons.length; i++) {
+    let isHeartActive = localStorage.getItem(`heart${i}`) === 'true';
+    if (isHeartActive) {
+        heartIcons[i].classList.add('active_heart');
+    }
+}
+
+
+for (let i = 0; i < heartIcons.length; i++) {
+    heartIcons[i].addEventListener('click', () => {
+        heartIcons[i].classList.toggle('active_heart');
+        let isHeartActive = Array.from(heartIcons[i].classList).includes('active_heart');
+        console.log(isHeartActive);
+        localStorage.setItem(`heart${i}`, isHeartActive);
+    });
+}
+
+for (let i = 0; i < heartCardIcon.length; i++) {
+    let isHeartActive = localStorage.getItem(`heart${i}`) === 'true';
+    if (isHeartActive) {
+        heartCardIcon[i].classList.add('active_heart');
+    }
+}
+
+
+for (let i = 0; i < heartCardIcon.length; i++) {
+    heartCardIcon[i].addEventListener('click', () => {
+        heartCardIcon[i].classList.toggle('active_heart');
+        let isHeartActive = heartCardIcon[i].classList.contains('active_heart');
+        localStorage.setItem(`heart${i}`, isHeartActive);
+    });
+}
+
+
+barsIcon.addEventListener('click', () => {
+    nav.classList.add('active')
+})
+
+closeIcon.addEventListener('click', () => {
+    nav.classList.remove('active')
+})
